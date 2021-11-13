@@ -1,0 +1,38 @@
+$cor_principal: #4B8EE3;
+$cor_secundaria: #CA53FB;
+$cor_texto_principal: #333;
+$cor_background: #FEF4DF;
+$cor_link: #5FFA9A;
+$cor_link_hover: #3c8e5b;
+$cor_main_border: #FFD9AE;
+$cor_main: #FFE8CF;
+$cor_logo: #C6E34B;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $cor_texto_principal;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-size: 1.6rem;
+    background-color: $cor_background;
+}

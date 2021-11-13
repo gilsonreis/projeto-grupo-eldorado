@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <title>MyMovies - Catalogo de Filmes</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <h1>MyMovies</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Filmes</a></li>
+                        <li><a href="#">Usuários</a></li>
+                    </ul>
+                    <div class="usuario-topo">
+                        <span class="nome-usuario">Bem vindo, <span>Thanos</span></span>
+                        <span class="logout"> <a href="#"> <i class="bi bi-box-arrow-left"></i> Sair</a></span>
+                    </div>
+                </nav>                
+            </div>
+        </header>
+        <main class="main">
+            <div class="listagem">
+                <div class="acoes">
+                    <p>Listando <strong>20</strong> de <strong>999</strong> registros</p>
+                    <a href="#" class="novo">Novo Registro</a>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Poster</th>
+                            <th>Título</th>
+                            <th>Gênero</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>fdfad</td>
+                            <td>fdafad</td>
+                            <td>fdaf</td>
+                            <td>
+                                <a href="#" class="bt-acao editar">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a href="#" class="bt-acao deletar">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>fdfad</td>
+                            <td>fdafad</td>
+                            <td>fdaf</td>
+                            <td>
+                                <a href="#" class="bt-acao editar">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a href="#" class="bt-acao deletar">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>fdfad</td>
+                            <td>fdafad</td>
+                            <td>fdaf</td>
+                            <td>
+                                <a href="#" class="bt-acao editar">
+                                    <i class="far fa-edit"></i>
+                                </a>
+                                <a href="#" class="bt-acao deletar">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="formulario">
+                <form action="" >
+                    <div class="form-group">
+                        <label for="">Título</label>
+                        <input type="text" placeholder="Titulo do filme" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Sinopse</label>
+                        <textarea placeholder="Sinopse do filme" name="sinopse"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Data de Lançamento</label>
+                        <input type="date" placeholder="Data de Lançamento" name="release_date">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Faturamento</label>
+                        <input type="text" placeholder="Quando o filme arrecadou" name="billing">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Poster</label>
+                        <input type="text" placeholder="Imagem do filme" name="cover">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Gênero</label>
+                        <select name="genre" id="">
+                            <option value="">Selecione</option>
+                            <option value="">Ação</option>
+                            <option value="">Comédia</option>
+                            <option value="">Terror</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group button-group">
+                        <button type="submit" class="salvar">Salvar</button>
+                        <button type="button" class="cancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

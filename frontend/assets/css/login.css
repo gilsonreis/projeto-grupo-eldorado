@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 1.6rem;
+  background-color: #FEF4DF;
+}
+
+body {
+  background-color: #FEF4DF;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main {
+  width: 80vw;
+  height: 80vh;
+  background-color: #FFE8CF;
+  border: 1px solid #FFD9AE;
+  border-radius: 10px;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .main .descricoes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .descricoes h1 {
+  font-family: "Mochiy Pop One", sans-serif;
+  color: #C6E34B;
+  text-shadow: 3px 3px 2px #CA53FB;
+  font-size: 7rem;
+}
+.container .main .descricoes h2 {
+  font-family: "Teko", sans-serif;
+  color: #CA53FB;
+  margin-bottom: 20px;
+}
+.container .main .formulario {
+  font-family: "Lato";
+  text-align: center;
+}
+.container .main .formulario h3 {
+  font-size: 3rem;
+}
+.container .main .formulario h2 {
+  font-size: 2rem;
+}
+.container .main .formulario form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+}
+.container .main .formulario form .form-group {
+  margin-top: 20px;
+}
+.container .main .formulario form .form-group label {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+.container .main .formulario form .form-group input {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #FFD9AE;
+  border-radius: 5px;
+}
+.container .main .formulario form .form-group button {
+  width: 100%;
+  border: none;
+  height: 2rem;
+  height: 40px;
+  background-color: #C6E34B;
+  cursor: pointer;
+  font: "Lato";
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=login.css.map */

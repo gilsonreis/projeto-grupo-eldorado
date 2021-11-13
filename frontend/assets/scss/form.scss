@@ -1,0 +1,133 @@
+@use '_fonts.scss';
+@use '_reset.scss';
+
+$cor_principal: #4B8EE3;
+$cor_secundaria: #CA53FB;
+$cor_texto_principal: #333;
+$cor_background: #FEF4DF;
+$cor_link: #5FFA9A;
+$cor_link_hover: #3c8e5b;
+$cor_main_border: #FFD9AE;
+$cor_main: #FFE8CF;
+$cor_logo: #C6E34B;
+$cor_cancel: #ccc;
+$cor_par: #FFE8F0;
+$cor_impar: #e2dcde;
+
+
+.main {
+    display: flex;
+    font-family: 'Lato';
+    .listagem{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        .acoes {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            .novo {
+                font: 'Lato';
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 0 10px;
+                border-radius: 5px;
+                background-color: $cor_link_hover;
+                padding: 10px;
+                color: #fff;
+            }
+            .novo:hover {
+                opacity: 0.6;
+            }
+        }
+        table.table, table.table tr th, table.table tr td {
+            border: 1px solid $cor_main_border;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        table.table {
+            tbody > tr:nth-child(even) {
+                background-color: $cor_par !important;
+            }
+            tbody > tr:nth-child(odd) {
+                background-color: $cor_impar !important;
+            }
+            thead > tr {
+                background-color: $cor_principal;
+                color: $cor_link
+            }
+            tbody > tr:hover {
+                background-color: $cor_cancel !important;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+    .formulario {
+        width: 30%;
+        font-family: 'Lato';
+        text-align: center;
+        h3 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+        form {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            width: 20vw;
+            .form-group {
+                margin-top: 20px;
+                label {
+                    display: block;
+                    width: 100%;
+                    font-weight: bold;
+                }
+                input, select {
+                    width: 100%;
+                    height: 40px;
+                    padding: 8px;
+                    border: 1px solid $cor_main_border;
+                    border-radius: 5px;
+                }
+                textarea {
+                    width: 100%;
+                    padding: 8px;
+                    border: 1px solid $cor_main_border;
+                    height: 100px;
+                    border-radius: 5px;
+                }
+                button{
+                    border: none;
+                    height: 40px;
+                    cursor: pointer;
+                    font: 'Lato';
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    padding: 0 10px;
+                    border-radius: 5px;
+                }
+                button.salvar {
+                    background-color: $cor_principal;
+                    order: 1;
+                }
+                button.cancelar {
+                    background-color: $cor_cancel;
+                    order: 0;
+                }
+                button:hover {
+                    opacity: 0.6;
+                }
+            }
+            .button-group {
+                display: flex;
+                justify-content: space-between;
+            }
+            
+        }
+    }
+}
+

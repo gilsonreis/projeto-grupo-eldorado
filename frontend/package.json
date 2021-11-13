@@ -1,0 +1,20 @@
+{
+  "name": "ProjetoFinal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run:sass": "sass --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilsonreis/projeto-grupo-eldorado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilsonreis/projeto-grupo-eldorado/issues"
+  },
+  "homepage": "https://github.com/gilsonreis/projeto-grupo-eldorado#readme"
+}
