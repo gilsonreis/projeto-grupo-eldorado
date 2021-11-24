@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["ES6"],
+    "module": "commonjs",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@Controllers/*":[
+        "./src/app/Controllers/*"
+      ],
+      "@Entities/*":[
+        "./src/app/Entities/*"
+      ],
+      "@Repositories/*":[
+        "./src/app/Repositories/*"
+      ],
+      "@Middlewares/*":[
+        "./src/app/Middlewares/*"
+      ],
+      "@Validators/*":[
+        "./src/app/Validators/*"
+      ],
+      "@Config/*":[
+        "./src/config/*"
+      ],
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "removeComments": true,
+
+  }
+}
