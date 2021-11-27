@@ -1,0 +1,19 @@
+{
+    "type": "mysql",
+    "host": "server.simplifysoftwares.com.br",
+    "port": 3306,
+    "username": "simplify_eldorado",
+    "password": "kMmE7UHY1NyS",
+    "database": "simplify_eldorado_news",
+    "logging": false,
+    "entities": [
+       "src/Entities/*.ts"
+    ],
+    "migrations": [
+       "src/Database/Migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "src/Database/Migrations",
+        "entitiesDir": "src/Entities"
+    }
+ }

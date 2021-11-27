@@ -1,0 +1,58 @@
+version: '3.7'
+
+services:
+  eldorado_news_web:
+    image: node:14.17.5
+    container_name: ${PROJECT_NAME}_api
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - eldorado_news_db
+    networks:
+      - ${PROJECT_NAME}-network
+    links:
+      - eldorado_news_db
+    ports:
+      - '${PORT}:${PORT}'
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: 'yarn dev:server'
+  eldorado_news_db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_HOST: ${DB_HOST}
+      MYSQL_DB: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    ports:
+      - '${DB_PORT}:${DB_PORT}'
+    expose:
+      - '${DB_PORT}'
+    volumes:
+      - ./.docker/data:/var/lib/mysql
+    networks:
+      - ${PROJECT_NAME}-network
+
+  phpMyAdmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: ${PROJECT_NAME}-phpmyadmin
+    restart: always
+    ports:
+      - '${DOCKER_PHPMYADMIN_PORT}:80'
+    environment:
+      PMA_HOST: ${PROJECT_NAME}-db
+      PMA_USER: root
+      PMA_PASSWORD: ${DB_PASS}
+    depends_on:
+      - eldorado_news_db
+    networks:
+      - ${PROJECT_NAME}-network
+
+
+networks:
+  eldorado-news-network:
+    driver: bridge
