@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>EldoradoNews</h1>
+    <form action="">
+        <div class="errors" *ngIf="hasErrors">
+            <ul>
+                <li *ngFor="let error of errors">{{ error }}</li>
+            </ul>
+        </div>
+        <div class="form-container">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" [(ngModel)]="Usuario.email">
+        </div>
+        <div class="form-container">
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" [(ngModel)]="Usuario.password">
+        </div>
+        <button type="button" class="btn-salvar" (click)="Logar()">Entrar</button>
+    </form>
+</div>

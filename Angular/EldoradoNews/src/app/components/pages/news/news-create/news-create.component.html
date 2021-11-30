@@ -1,0 +1,42 @@
+<div class="title">
+    <h2>Cadastro de notícia</h2>
+    <hr>
+</div>
+<div class="container" >
+    <div class="errors" *ngIf="hasErrors">
+        <ul>
+            <li *ngFor="let error of errors">{{ error }}</li>
+        </ul>
+    </div>
+    <div class="success" *ngIf="hasSuccess">{{ successMessage }}</div>
+    <form action="">
+        <div class="form-container">
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" [(ngModel)]="noticia.data.title">
+        </div>
+        <div class="form-container">
+            <label for="news_body">Notícia</label>
+            <textarea id="news_body" name="news_body" [(ngModel)]="noticia.data.news_body"></textarea>
+        </div>
+        <div class="form-container">
+            <label for="posted_by">Autor</label>
+            <input type="text" id="posted_by" name="posted_by" [(ngModel)]="noticia.data.posted_by">
+        </div>
+        <div class="form-container">
+            <label for="cover">Imagem</label>
+            <input type="file" id="cover" name="cover" [(ngModel)]="noticia.data.cover" (change)="handleFile($event.target.files)">
+        </div>
+        
+        <div class="form-container">
+            <label for="category">Categoria</label>
+            <select id="category" name="category" [(ngModel)]="noticia.data.category">
+                <option value="">Selecione</option>
+                <option *ngFor="let categoria of categorias.data" [value]="categoria.id" >
+                    {{ categoria.name }}
+                </option>
+            </select>
+        </div>
+
+        <button type="button" class="btn-salvar" (click)="addNew()">Salvar</button>
+    </form>
+</div>

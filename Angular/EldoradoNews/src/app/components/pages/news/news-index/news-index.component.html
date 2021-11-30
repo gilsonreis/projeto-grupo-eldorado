@@ -1,0 +1,58 @@
+<div class="title">
+    <h2>Listagem de notícias</h2>
+    <hr>
+</div>
+<div class="container">
+    <a [routerLink]="['/noticias/cadastrar']" class='btn-cadastrar'><i class="fas fa-plus-circle"></i> Nova Notícia</a>
+    <select (change)="setPerPage($event.target.value)">
+        <option value="15">15</option>
+        <option value="30">30</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th class="col-acoes">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let noticia of noticias.data">
+                <td>{{ noticia.id }}</td>
+                <td>{{ noticia.title }}</td>
+                <td>{{ noticia.posted_by }}</td>
+                <td>
+                    <a href="#" class="btn btn-editar">
+                        <i class="fas fa-pencil"></i>
+                    </a>
+                    <a [routerLink]="['/noticias/visualizar/', noticia.id]" class="btn btn-visualizar">
+                        <i class="fas fa-eye"></i>
+                    </a>
+                    <a href="#" class="btn btn-excluir">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p style="float: left;margin-top: 20px">
+        Mostrando <strong>{{ noticias.per_page }}</strong> 
+        registros de <strong>{{ noticias.from }}</strong> até 
+        <strong>{{ noticias.to }}</strong> na página 
+        <strong>{{ noticias.current_page }}</strong>.
+        Total de <strong>{{ noticias.total }}</strong> registros.
+    </p>
+
+    <a href="javascript:void(0);" 
+            *ngIf="noticias.current_page < noticias.last_page" 
+            class="btn-paginacao" 
+            (click)="paginate(noticias.next_page)">Próximo <i class="fas fa-arrow-right"></i></a>
+    
+    <a href="javascript:void(0);" 
+            *ngIf="noticias.current_page > 1" 
+            class="btn-paginacao" 
+            (click)="paginate(noticias.prev_page)"><i class="fas fa-arrow-left"></i>Anterior </a>
+</div>

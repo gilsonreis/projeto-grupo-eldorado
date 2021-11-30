@@ -1,0 +1,32 @@
+<h1>Bem vindo, {{ nome }}!</h1>
+
+<button (click)="fnClicar(nome)">Clique-me!</button>
+<img [src]="imagem" [alt]="altImagem"/>
+
+<form action="" style="margin-top: 30px">
+    <input type="text" name="comida" [(ngModel)]="comida">
+    <button>Enviar!</button>
+    <p>Você gosta de {{ comida }}?</p>
+    <button (click)="setGostaComida('S');">Sim</button>
+    <button (click)="setGostaComida('N');">Não</button>
+</form>
+
+<div *ngIf="comidaQueGosta.length > 0">
+    <h3>Gosto de ...</h3>
+    <ul>
+        <li *ngFor="let gosta of comidaQueGosta">{{ gosta }}  - <a href="#" (click)="removeComidaQueGosta(gosta)">x</a></li>
+    </ul>
+</div>
+
+<div  *ngIf="comidaQueNaoGosta.length > 0">
+    <h3>Não gosto de ...</h3>
+    <ul>
+        <li *ngFor="let naoGosta of comidaQueNaoGosta">{{ naoGosta }} - <a href="#" (click)="removeComidaQueNaoGosta(naoGosta)">x</a></li>
+    </ul>
+</div>
+
+<div *ngFor="let noticia of noticias    ">
+    <h1>{{ noticia.title }}</h1>
+    <p>{{ noticia.news_body }}</p>
+</div>
+
