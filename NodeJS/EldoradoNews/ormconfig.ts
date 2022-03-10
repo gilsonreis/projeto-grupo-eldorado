@@ -2,12 +2,12 @@ require('dotenv').config();
 const { resolve } = require('path');
 
 module.exports = {
-    "type": process.env.DB_TYPE, //"mysql",
-    "host": process.env.DB_HOST, //"server.simplifysoftwares.com.br",
-    "port": process.env.DB_PORT, //3306,
-    "username": process.env.DB_USER, //"simplify_eldorado",
-    "password": process.env.DB_PASS, //"kMmE7UHY1NyS",
-    "database": process.env.DB_DATABASE, //"simplify_eldorado_news",
+    "type": process.env.DB_TYPE, 
+    "host": process.env.DB_HOST, 
+    "port": process.env.DB_PORT, 
+    "username": process.env.DB_USER, 
+    "password": process.env.DB_PASS, 
+    "database": process.env.DB_DATABASE, 
     "logging": false,
     "entities": [
       __dirname + "/dist/app/Entities/*.js",
